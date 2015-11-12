@@ -1,0 +1,14 @@
+Tavg
+Depart
+WetBulb
+Heat
+Cool
+Sunrise
+Sunset
+Depth
+SnowFall
+PrecipTotal
+StnPressure
+SeaLevel
+AvgSpeed
+
