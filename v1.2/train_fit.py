@@ -1,9 +1,3 @@
-"""
-Beating the Benchmark
-West Nile Virus Prediction @ Kaggle
-__author__ : Abhihsek
-"""
-
 import pandas as pd
 import numpy as np
 import math

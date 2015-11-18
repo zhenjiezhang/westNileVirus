@@ -37,7 +37,7 @@ def precip(text):
     return float(text)
 
 def impute_missing_weather_station_values(weather):
-    # Stupid simple
+
     for k, v in weather.items():
         if v[0] is None:
             v[0] = v[1]
@@ -94,7 +94,6 @@ def load_testing():
     
     
 def closest_station(lat, longi):
-    # Chicago is small enough that we can treat coordinates as rectangular.
     stations = np.array([[41.995, -87.933],
                          [41.786, -87.752]])
     loc = np.array([lat, longi])
@@ -117,7 +116,7 @@ def normalize(X, mean=None, std=None):
 def scaled_count(record):
     SCALE = 10.0
     if "NumMosquitos" not in record:
-        # This is test data
+        # test data
         return 1
     return int(np.ceil(record["NumMosquitos"] / SCALE))
     
@@ -206,8 +205,7 @@ def train():
             AdjustVariable(learning_rate, target=0, half_life=8),
             ],
 
-    # This is silly, but we don't want a stratified K-Fold here
-    # To compensate we need to pass in the y_tensor_type and the loss.
+
     regression=True,
     y_tensor_type = T.imatrix,
     objective_loss_function = binary_crossentropy,
